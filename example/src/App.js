@@ -2,7 +2,6 @@ import React from 'react';
 
 import { LineGraph } from 'react-data-viz';
 import data from './data';
-import * as d3 from "d3";
 
 const App = () => {
     const dimensions = {
@@ -16,7 +15,7 @@ const App = () => {
         }
     };
 
-    const xAccessor = d => d3.timeParse("%Y-%m-%d")(d.date);
+    const xAccessor = d => Date.parse(d.date);
     const yAccessor = "value";
 
     const config = {
@@ -28,7 +27,7 @@ const App = () => {
             axis: {
                 x: {
                     title: "x-axis label",
-                    formatTick: d3.timeFormat("%d %b %Y"),
+                    formatTick: (v) => v.toISOString().split('T')[0],
                     numberOfTicks: 5
                 },
                 y: {
