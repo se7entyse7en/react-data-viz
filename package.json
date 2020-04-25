@@ -1,5 +1,5 @@
 {
-  "name": "react-data-viz",
+  "name": "@se7entyse7en/react-data-viz",
   "version": "0.0.1",
   "description": "A React library for data viz based on d3.js",
   "author": "se7entyse7en",
