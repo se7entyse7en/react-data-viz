@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A React library for data viz based on d3.js",
   "author": "se7entyse7en",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "repository": "se7entyse7en/react-data-viz",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
