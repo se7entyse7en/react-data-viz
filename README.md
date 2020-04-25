@@ -9,7 +9,7 @@ Examples: https://se7entyse7en.github.io/react-data-viz/.
 ## Install
 
 ```bash
-npm install --save react-data-viz
+npm install --save @se7entyse7en/react-data-viz
 ```
 
 ## License
