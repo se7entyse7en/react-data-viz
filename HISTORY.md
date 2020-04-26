@@ -1,6 +1,10 @@
 # HISTORY
 
-## Unreleased
+## [Unreleased](https://github.com/se7entyse7en/react-data-viz/compare/v0.0.1...master)
+
+### Added
+
+- Added travis for CI
 
 ### Modified
 
