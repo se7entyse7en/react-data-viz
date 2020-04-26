@@ -5,6 +5,8 @@
 ### Added
 
 - Added travis for CI
+- Added possibility to place axis in different positions
+- Added `LineGraphDoubleYAxis` component
 
 ### Modified
 
