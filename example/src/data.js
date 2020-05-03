@@ -10,7 +10,19 @@ const data = {
         {date: "2020-01-08", value: 83, extraValue: 95},
         {date: "2020-01-09", value: 53, extraValue: 43},
         {date: "2020-01-10", value: 23, extraValue: 21},
-    ]
+    ],
+    scatter: [
+        {x: 12, y: 53},
+        {x: 32, y: 23},
+        {x: 132, y: 12},
+        {x: 78, y: 3},
+        {x: 6, y: 98},
+        {x: 44, y: 56},
+        {x: 91, y: 26},
+        {x: 28, y: 29},
+        {x: 101, y: 37},
+        {x: 102, y: 91},
+    ],
 };
 
 export default data;

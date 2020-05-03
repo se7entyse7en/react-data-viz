@@ -45,16 +45,6 @@ const LineGraphDoubleYAxis = ({
 
   return (
     <Chart dimensions={dimensions_}>
-      <Content
-        data={data}
-        xAccessor={xAccessor_}
-        y0Accessor={y0Accessor_}
-        y1Accessor={y1Accessor_}
-        xScale={xScale}
-        y0Scale={y0Scale}
-        y1Scale={y1Scale}
-        config={mainConf}
-      />
       <Title label={mainConf.title} />
       <Axis
         dimension="x"
@@ -77,6 +67,16 @@ const LineGraphDoubleYAxis = ({
         position={AXIS_POSITIONS.RIGHT}
         formatTick={y1AxisConf.formatTick}
         numberOfTicks={y1AxisConf.numberOfTicks}
+      />
+      <Content
+        data={data}
+        xAccessor={xAccessor_}
+        y0Accessor={y0Accessor_}
+        y1Accessor={y1Accessor_}
+        xScale={xScale}
+        y0Scale={y0Scale}
+        y1Scale={y1Scale}
+        config={mainConf}
       />
     </Chart>
   );

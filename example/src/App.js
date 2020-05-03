@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LineGraph, LineGraphDoubleYAxis } from 'react-data-viz';
+import { LineGraph, LineGraphDoubleYAxis, ScatterPlot } from 'react-data-viz';
 import data from './data';
 
 const App = () => {
@@ -19,6 +19,7 @@ const App = () => {
         <>
           <LineGraphExample dimensions={dimensions}/>
           <LineGraphDoubleYAxisExample dimensions={dimensions}/>
+          <ScatterPlotExample dimensions={dimensions} />
         </>
     );
 };
@@ -55,9 +56,11 @@ const LineGraphExample = ({dimensions}) => {
 
     return (
         <Border>
-          {data && <LineGraph data={data.timeseries} dimensions={dimensions}
-                              xAccessor={xAccessor} yAccessor={yAccessor}
-                              config={config}></LineGraph>}
+          {data && <LineGraph
+                     data={data.timeseries} dimensions={dimensions}
+                     xAccessor={xAccessor} yAccessor={yAccessor}
+                     config={config}>
+                   </LineGraph>}
         </Border>
     );
 };
@@ -96,9 +99,42 @@ const LineGraphDoubleYAxisExample = ({dimensions}) => {
 
     return (
         <Border>
-          {data && <LineGraphDoubleYAxis data={data.timeseries} dimensions={dimensions}
-          xAccessor={xAccessor} y0Accessor={y0Accessor} y1Accessor={y1Accessor}
-          config={config}></LineGraphDoubleYAxis>}
+          {data && <LineGraphDoubleYAxis
+                     data={data.timeseries} dimensions={dimensions}
+                     xAccessor={xAccessor} y0Accessor={y0Accessor} y1Accessor={y1Accessor}
+                     config={config}>
+                   </LineGraphDoubleYAxis>}
+        </Border>
+    );
+};
+
+const ScatterPlotExample = ({dimensions}) => {
+    const config = {
+        main: {
+            title: "Scatter Plot",
+            color: "#e67e22",
+            size: 10,
+        },
+        peripherals: {
+            axis: {
+                x: {
+                    title: "x-axis label",
+                    numberOfTicks: 20
+                },
+                y: {
+                    title: "y-axis label",
+                    numberOfTicks: 10
+                },
+            }
+        }
+    };
+
+    return (
+        <Border>
+          {data && <ScatterPlot
+                     data={data.scatter} dimensions={dimensions}
+                     config={config}>
+                   </ScatterPlot>}
         </Border>
     );
 };
