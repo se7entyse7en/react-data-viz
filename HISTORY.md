@@ -4,6 +4,7 @@
 
 ### Added
 
+- Added `BubbleChart` component
 - Added `Circle` component
 - Added `ScatterPlot` component
 
