@@ -1,6 +1,8 @@
 # HISTORY
 
-## [Unreleased](https://github.com/se7entyse7en/react-data-viz/compare/v0.0.1...master)
+## [Unreleased](https://github.com/se7entyse7en/react-data-viz/compare/v0.1.0...master)
+
+## [v0.1.0 - 2020-05-03](https://github.com/se7entyse7en/react-data-viz/compare/v0.0.1...v0.1.0)
 
 ### Added
 
