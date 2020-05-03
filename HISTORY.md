@@ -2,6 +2,15 @@
 
 ## [Unreleased](https://github.com/se7entyse7en/react-data-viz/compare/v0.1.0...master)
 
+### Added
+
+- Added `Circle` component
+- Added `ScatterPlot` component
+
+### Modified
+
+- Made the charts main content be drawn above peripherals
+
 ## [v0.1.0 - 2020-05-03](https://github.com/se7entyse7en/react-data-viz/compare/v0.0.1...v0.1.0)
 
 ### Added
