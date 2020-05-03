@@ -106,7 +106,12 @@ LineGraphDoubleYAxis.propTypes = {
         formatTick: PropTypes.func,
         numberOfTicks: PropTypes.number
       }),
-      y: PropTypes.shape({
+      y0: PropTypes.shape({
+        title: PropTypes.string,
+        formatTick: PropTypes.func,
+        numberOfTicks: PropTypes.number
+      }),
+      y1: PropTypes.shape({
         title: PropTypes.string,
         formatTick: PropTypes.func,
         numberOfTicks: PropTypes.number

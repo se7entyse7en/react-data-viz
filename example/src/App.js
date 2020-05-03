@@ -23,13 +23,19 @@ const App = () => {
     );
 };
 
+const Border = ({children}) => (
+    <div style={{margin: '2% 5%', border: 'solid 2px black', textAlign: 'center'}}>
+      {children}
+    </div>
+);
+
 const LineGraphExample = ({dimensions}) => {
     const xAccessor = d => Date.parse(d.date);
     const yAccessor = "value";
 
     const config = {
         main: {
-            title: "Title",
+            title: "Line Graph",
             color: "#3498db"
         },
         peripherals: {
@@ -48,11 +54,11 @@ const LineGraphExample = ({dimensions}) => {
     };
 
     return (
-        <div style={{margin: '2% 5%', border: 'solid 2px black', textAlign: 'center'}}>
+        <Border>
           {data && <LineGraph data={data.timeseries} dimensions={dimensions}
-                           xAccessor={xAccessor} yAccessor={yAccessor}
-                           config={config}></LineGraph>}
-        </div>
+                              xAccessor={xAccessor} yAccessor={yAccessor}
+                              config={config}></LineGraph>}
+        </Border>
     );
 };
 
@@ -63,7 +69,7 @@ const LineGraphDoubleYAxisExample = ({dimensions}) => {
 
     const config = {
         main: {
-            title: "Title",
+            title: "Line Graph Double y-Axis",
             color: {
                 y0: "#2ecc71",
                 y1: "#16a085"
@@ -89,11 +95,11 @@ const LineGraphDoubleYAxisExample = ({dimensions}) => {
     };
 
     return (
-        <div style={{margin: '2% 5%', border: 'solid 2px black', textAlign: 'center'}}>
+        <Border>
           {data && <LineGraphDoubleYAxis data={data.timeseries} dimensions={dimensions}
           xAccessor={xAccessor} y0Accessor={y0Accessor} y1Accessor={y1Accessor}
           config={config}></LineGraphDoubleYAxis>}
-        </div>
+        </Border>
     );
 };
 
