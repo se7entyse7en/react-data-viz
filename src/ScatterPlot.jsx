@@ -32,14 +32,6 @@ const ScatterPlot = ({ data, dimensions, xAccessor, yAccessor, config }) => {
 
   return (
     <Chart dimensions={dimensions_}>
-      <Content
-        data={data}
-        xAccessor={xAccessor_}
-        yAccessor={yAccessor_}
-        xScale={xScale}
-        yScale={yScale}
-        config={mainConf}
-      />
       <Title label={mainConf.title} />
       <Axis
         dimension="x"
@@ -54,6 +46,14 @@ const ScatterPlot = ({ data, dimensions, xAccessor, yAccessor, config }) => {
         scale={yScale}
         formatTick={yAxisConf.formatTick}
         numberOfTicks={yAxisConf.numberOfTicks}
+      />
+      <Content
+        data={data}
+        xAccessor={xAccessor_}
+        yAccessor={yAccessor_}
+        xScale={xScale}
+        yScale={yScale}
+        config={mainConf}
       />
     </Chart>
   );
