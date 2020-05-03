@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { LineGraph, LineGraphDoubleYAxis, ScatterPlot } from 'react-data-viz';
+import { LineGraph, LineGraphDoubleYAxis, ScatterPlot, BubbleChart } from 'react-data-viz';
 import data from './data';
 
 const App = () => {
@@ -20,6 +20,7 @@ const App = () => {
           <LineGraphExample dimensions={dimensions}/>
           <LineGraphDoubleYAxisExample dimensions={dimensions}/>
           <ScatterPlotExample dimensions={dimensions} />
+          <BubbleChartExample dimensions={dimensions} />
         </>
     );
 };
@@ -135,6 +136,36 @@ const ScatterPlotExample = ({dimensions}) => {
                      data={data.scatter} dimensions={dimensions}
                      config={config}>
                    </ScatterPlot>}
+        </Border>
+    );
+};
+
+const BubbleChartExample = ({dimensions}) => {
+    const config = {
+        main: {
+            title: "Bubble Chart",
+            color: "#9b59b6",
+        },
+        peripherals: {
+            axis: {
+                x: {
+                    title: "x-axis label",
+                    numberOfTicks: 20
+                },
+                y: {
+                    title: "y-axis label",
+                    numberOfTicks: 10
+                },
+            }
+        }
+    };
+
+    return (
+        <Border>
+          {data && <BubbleChart
+                     data={data.scatter} dimensions={dimensions}
+                     config={config}>
+                   </BubbleChart>}
         </Border>
     );
 };
