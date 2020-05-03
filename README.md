@@ -12,6 +12,10 @@ Examples: https://se7entyse7en.github.io/react-data-viz/.
 npm install --save @se7entyse7en/react-data-viz
 ```
 
+## Usage
+
+See the examples [here](https://github.com/se7entyse7en/react-data-viz/blob/master/example/src/App.js).
+
 ## License
 
 Apache 2.0 © [se7entyse7en](https://github.com/se7entyse7en)
